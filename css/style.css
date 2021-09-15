@@ -1,0 +1,387 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to top, rgb(101, 78, 163), rgb(234, 175, 200));
+
+    margin:0;   
+}
+
+
+
+/* Start Home */
+.container{
+    width:80%;
+    height: 500px;
+    background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    border-radius: 5px;
+
+    margin:2rem auto;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: end;
+}
+
+.navbar-nav{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.navbar-nav li{
+    list-style-type: none;
+    margin:0 30px;
+    padding: 20px 0;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.navbar-nav li:hover{
+    color: red;
+}
+
+.image-box{
+    width: 80%;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.image-box .imgs{
+    width: 150px;
+    height: 150px;
+
+    margin: 1rem;
+
+    animation-name: myani;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+
+}
+
+
+.imgs:nth-of-type(1){
+    animation-delay: 1s;
+}
+
+.imgs:nth-of-type(2){
+    animation-delay: 0.8s;
+}
+
+.imgs:nth-of-type(3){
+    animation-delay: 0.6s;
+}
+
+.imgs:nth-of-type(4){
+    animation-delay: 0.4s;
+}
+
+.imgs:nth-of-type(5){
+    animation-delay: 1.2s;
+}
+
+.imgs:nth-of-type(6){
+    animation-delay: 1s;
+}
+
+.imgs:nth-of-type(7){
+    animation-delay: 0.8s;
+}
+
+.imgs:nth-of-type(8){
+    animation-delay:0.6s;
+}
+
+@keyframes myani{
+    0%{
+        transform: translate(-120px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.imgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+/* End Home */
+
+
+
+/* Start Mission */
+.container-fluid{
+    width: 80%;
+    height: 400px;
+    background: linear-gradient(to right, rgb(84, 74, 125), rgb(255, 212, 82));
+
+    margin:auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    display: flex;
+
+    position: relative;
+}
+
+
+.container-fluid img{
+    width: 200px;
+    height: 300px;
+    margin: 4rem;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+
+.container-fluid .textbox{
+    width:50%;
+    margin: 4rem;
+    color: #fff;
+
+
+    position: relative;
+}
+
+.image-box{
+    position: relative;
+}
+
+
+
+
+.textbox .link{
+    text-decoration: none;
+    background-color: transparent;
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border:1px solid #f4f4f4;
+
+    position:absolute;
+
+    top:10rem;
+    cursor: pointer;
+}
+
+.textbox .link:hover{
+    color: red;
+}
+
+
+.textbox h1{
+    margin: 0;
+    transform: translateY(50px);
+    opacity:0;
+}
+
+.textbox h1.slide{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.textbox p{
+    transform: translateY(50px);
+    opacity:0;
+}
+
+.textbox p.slide{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+}
+
+.textbox .link{
+    transform: translateY(50px);
+    opacity:0;
+}
+
+.textbox .link.slide{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1.5s;
+}
+
+
+
+/* End Mission */
+
+
+/* Start Loginform */
+.logincontainer{
+    width:80%;
+    height: 400px;
+    background:linear-gradient(to right, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
+    color: #fff;
+    margin: 1rem auto;
+    padding:10px 3rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+
+    display: flex;
+}
+
+.loginform{
+    position: relative;
+}
+
+.headerbox{
+    width: 50%;
+    
+}
+
+.headerbox .map{
+    text-align:justify;
+
+    /* transform: translateX(-120px); */
+}
+
+.map.show{
+    animation: anishow 3s;
+}
+
+.text.show{
+    animation: anishow 3s backwards;
+    animation-delay:1s;
+
+}
+
+
+@keyframes anishow{
+    0%{
+        transform: translate(-120px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
+
+.loginform{
+    width:50%;
+    margin: auto 2rem;
+    
+}
+
+.formgroup{
+    /* background-color: red; */
+    padding: 30px;
+
+    position: relative;
+}
+
+
+.form-control{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin: 5px 0;
+    border:none;
+    border-bottom: 1px solid blue;
+}
+
+.form-control::placeholder{
+    color:#fff;
+}
+
+.form-control:focus{
+    outline: none;
+}
+
+label{
+    color:#fff;
+    letter-spacing: 3px;
+
+    position: absolute;
+    top:0.7rem;
+    left:2rem;
+}
+
+.formgroup label span{
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.formgroup .form-control:focus + label span{
+    transform: translateY(-20px);
+    color:blue;
+}
+
+/* .formgroup .form-control:valid + label span{
+    transform: translateY(-20px);
+    color:blue;
+} */
+
+.confirmbtn{
+    background-color: transparent;
+    padding: 10px 15px;
+    border:1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom:-2rem;
+    right:1.5rem; 
+
+}
+
+.confirmbtn:active{
+    transform: scale(0.95);
+}
+
+
+/* Start Check form login */
+
+small{
+    color:red;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+
+.formgroup.showsuccess label{
+    color:green;
+}
+
+.formgroup.showsuccess .form-control{
+    border-color: green;
+    color:green;
+}
+
+
+.formgroup.showerror label{
+    color:red;
+}
+
+.formgroup.showerror .form-control{
+    border-color: red;
+    color:red;
+}
+
+.formgroup.showerror small{
+    opacity: 1;
+}
+/* End Check form login  */
+
+/* End Loginform */
